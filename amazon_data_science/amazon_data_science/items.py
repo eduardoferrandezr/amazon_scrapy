@@ -6,9 +6,10 @@
 # http://doc.scrapy.org/en/latest/topics/items.html
 
 import scrapy
+from scrapy import Field
 
 
 class AmazonDataScienceItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    title = Field()
+    date = Field()
+    author = Field()
