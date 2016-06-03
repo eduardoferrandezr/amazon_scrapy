@@ -29,4 +29,5 @@ class DataScienceBooksSpider(scrapy.Spider):
         next_link = response.xpath("//a[@id='pagnNextLink']/@href").extract()
         if next_link:
             url = response.urljoin(next_link[0])
-            yield scrapy.Request(url, self.parse)
+            # uncomment this line to keep on scraping next pages
+            # yield scrapy.Request(url, self.parse)
