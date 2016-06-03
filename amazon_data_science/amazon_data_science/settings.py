@@ -14,6 +14,9 @@ BOT_NAME = 'amazon_data_science'
 SPIDER_MODULES = ['amazon_data_science.spiders']
 NEWSPIDER_MODULE = 'amazon_data_science.spiders'
 
+ITEM_PIPELINES = {
+    'amazon_data_science.pipelines.CsvExportPipeline': 0
+}
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'amazon_data_science (+http://www.yourdomain.com)'
